@@ -1,0 +1,64 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Gerenciar Cidades</h4>
+  </div>
+  <div class="card-body">
+    <div class="d-flex justify-content-end">
+      <a class="btn btn-success" href="/cities/new">Adicionar</a>
+    </div>
+    <form action="/cities" method="GET">
+      <div class="row">
+        <div class="col-sm">
+          <label><b>Cidade:</b></label>
+          <input class="form-control" type="text" name="name" value="<%= searchOptions.name %>">
+        </div>
+        <div class="col-sm">
+          <label><b>Estado:</b></label>
+          <input class="form-control" type="text" name="state" value="<%= searchOptions.state %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-warning" type="submit">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="table-responsive">
+      <table class="table table-hover table-sm ">
+        <thead class="align-middle text-center thead-light">
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody class="align-middle">
+          <% cities.forEach(city=> { %>
+            <tr>
+              <td>
+                <%= city.id %>
+              </td>
+              <td>
+                <%= city.name %>
+              </td>
+              <td>
+                <%= city.state %>
+              </td>
+              <td>
+                <div class="d-flex justify-content-end">
+                  <a class="btn btn-secondary" href="/cities/<%= city.id %>">Detalhar</a>
+                  <a class="btn btn-primary" href="/cities/<%= city.id %>/edit">Editar</a>
+                  <%- include('../partials/deleteForm', { url: `/cities/${city.id}` }) %>
+                </div>
+              </td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br>

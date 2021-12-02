@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Editar Cidade</h4>
+  </div>
+  <div class="card-body">
+    <form action="/cities/<%= city.id %>?_method=PUT" method="POST">
+      <%- include('_form_fields') %>
+        <div class="row">
+          <div class="col-md">
+            <div class="d-flex justify-content-end">
+              <a class="btn btn-danger" href="/cities">Cancelar</a>
+              <button class="btn btn-primary" type="submit">Atualizar</button>
+            </div>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>

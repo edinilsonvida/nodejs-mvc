@@ -1,0 +1,18 @@
+@import 'shared/fonts.css';
+
+:root {
+  font-family: 'Gotham Rounded';
+  font-size: 16px;
+}
+
+.col,
+[class*="col-"] {
+  padding-bottom: 10px;
+}
+
+.btn {
+  font-family: 'Gotham Rounded';
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

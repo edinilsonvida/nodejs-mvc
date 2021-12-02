@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header">
+    <h4>
+      <%= city.name %>
+    </h4>
+  </div>
+  <div class="card-body">
+    <p><b>Código: </b>
+      <%= city.id %>
+    </p>
+    <p><b>Cidade: </b>
+      <%= city.name %>
+    </p>
+    <p><b>Estado: </b>
+      <%= city.state %>
+    </p>
+    <div class="row">
+      <div class="col-md">
+        <div class="d-flex justify-content-end">
+          <a class="btn btn-secondary" href="/cities">Voltar</a>
+          <a class="btn btn-primary" href="/cities/<%= city.id %>/edit">Editar</a>
+          <%- include('../partials/deleteForm', { url: `/cities/${city.id}` }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

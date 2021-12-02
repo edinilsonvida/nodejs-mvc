@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Adicionar Cidade</h4>
+  </div>
+  <div class="card-body">
+    <form action="/cities" method="POST">
+      <%- include('_form_fields') %>
+        <div class="row">
+          <div class="col-md">
+            <div class="d-flex justify-content-end">
+              <a class="btn btn-danger" href="/cities">Cancelar</a>
+              <button class="btn btn-success" type="submit">Adicionar</button>
+            </div>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>
