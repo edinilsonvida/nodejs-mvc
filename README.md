@@ -98,13 +98,3 @@
         </tr>
     </tbody>
 </table>
-<h4>Informações das Rotas de Clientes</h4>
-<table>
-    <thead>
-        <tr>
-            <th>Métodos</th>
-            <th>URLs</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-</table>
